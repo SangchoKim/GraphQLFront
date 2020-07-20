@@ -11,6 +11,28 @@ const HOME_MAIN = gql`
     }  
 `;
 
+const GET_MOVIE = gql`
+    query getMovieDetails($id: Int!){
+        getMovie(id: $id) {
+            id
+            title
+            medium_cover_image
+            language
+            rating
+            description_full
+          }
+        getSuggestedMovie(id: $id) {
+            id
+            title
+            medium_cover_image
+            language
+            rating
+            description_full
+        }
+    }
+`;
+
 export {
-    HOME_MAIN 
+    HOME_MAIN,
+    GET_MOVIE 
 }

@@ -11,7 +11,7 @@ class App extends Component {
           <Router>
             <>
               <Route exact={true} path={"/"} component={Home} />
-              <Route path={"/detail/:movieId"} component={Detail} />
+              <Route path="/detail/:id" component={Detail} />
             </>
           </Router>
         </ApolloProvider>
